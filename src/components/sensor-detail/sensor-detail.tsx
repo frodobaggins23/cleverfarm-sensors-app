@@ -11,7 +11,7 @@ const SensorDetail = ({ sensors }: PropsFromRedux) => {
   const { id }: {id: string} = useParams()
   const activeSensor = sensors[parseInt(id) - 1]
   return (
-    <div>
+    <>
       <List>
         <ListItem>
           <ListItemAvatar>
@@ -42,7 +42,7 @@ const SensorDetail = ({ sensors }: PropsFromRedux) => {
         <Button color="secondary" size="small">Go Back</Button>
       </Link>
       <SensorMap coordinates={activeSensor.coordinates}/>
-    </div>
+    </>
   )
 }
 

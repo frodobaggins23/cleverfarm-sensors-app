@@ -13,22 +13,21 @@ type Props = {
     id: string,
 }
 
-export default function SensorCard ({ name, description, id }: Props) {
-  return (
-    <Card className={css.root} variant="outlined">
-      <CardContent>
-        <Typography className={css.title} color="textSecondary" variant="h6" gutterBottom>
-          {name}
-        </Typography>
-        <Typography variant="body1" component="p">
-          {description}
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Link to={`/${id}`}>
-          <Button color="secondary" size="small">Details</Button>
-        </Link>
-      </CardActions>
-    </Card>
-  )
-}
+const SensorCard = ({ name, description, id }: Props) => (
+  <Card className={css.root} variant="outlined">
+    <CardContent>
+      <Typography className={css.title} color="textSecondary" variant="h6" gutterBottom>
+        {name}
+      </Typography>
+      <Typography variant="body1" component="p">
+        {description}
+      </Typography>
+    </CardContent>
+    <CardActions>
+      <Link to={`/${id}`}>
+        <Button color="secondary" size="small">Details</Button>
+      </Link>
+    </CardActions>
+  </Card>
+)
+export default SensorCard
