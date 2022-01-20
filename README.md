@@ -9,3 +9,4 @@ technology: React, Redux, Redux Saga, Material UI, Typescript && JSON server
 - app runs at http://localhost:3060
 
 enjoy
+
